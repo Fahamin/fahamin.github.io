@@ -3,13 +3,15 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/fahamin.github.io/', // 👈 Adjust this to your repo name
-  plugins: [react()],
+  base: '/', // ✅ Fixed for user repo
+  plugins: [
+    react(),
+    componentTagger(), // ✅ include if you use it
+  ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // 👈 Define alias here
+      '@': path.resolve(__dirname, './src'),
     },
   },
-})
+});
