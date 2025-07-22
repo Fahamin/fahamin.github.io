@@ -39,17 +39,7 @@ const Contact = () => {
       title: "Message Sent!",
       description: "Thank you for your interest. I'll get back to you within 24 hours.",
     });
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      projectType: '',
-      budget: '',
-      timeline: '',
-      message: ''
-    });
+    // FormSubmit will handle the actual submission
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -60,19 +50,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "contact@example.com",
-      href: "mailto:contact@example.com"
+      value: "fahamin383@gmail.com",
+      href: "mailto:fahamin383@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "01639467698",
+      href: "tel:+8801639467698"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Badda-Dhaka-1212",
       href: "#"
     },
     {
@@ -84,10 +74,10 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, label: "GitHub", href: "https://github.com" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-    { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
-    { icon: Globe, label: "Portfolio", href: "#" }
+    { icon: Github, label: "GitHub", href: "https://github.com/Fahamin" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/fahamin-fahim-384958153/" },
+    { icon: Twitter, label: "Facebook", href: "https://www.facebook.com/fahamin.hasanfahim" },
+    { icon: Globe, label: "Portfolio", href: "https://fahamin.github.io/" }
   ];
 
   const services = [
@@ -118,12 +108,24 @@ const Contact = () => {
               <Card className="bg-gradient-card shadow-card">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form 
+                    action="https://formsubmit.co/fahamin383@gmail.com" 
+                    method="POST"
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
+                    {/* FormSubmit Configuration */}
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_subject" value="New Project Inquiry!" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_next" value="https://yourportfolio.com/thank-you" />
+
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <Label htmlFor="name">Full Name *</Label>
                         <Input
                           id="name"
+                          name="name"
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
                           required
@@ -134,6 +136,7 @@ const Contact = () => {
                         <Label htmlFor="email">Email Address *</Label>
                         <Input
                           id="email"
+                          name="email"
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
@@ -148,6 +151,7 @@ const Contact = () => {
                         <Label htmlFor="phone">Phone Number</Label>
                         <Input
                           id="phone"
+                          name="phone"
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
@@ -158,6 +162,7 @@ const Contact = () => {
                         <Label htmlFor="company">Company</Label>
                         <Input
                           id="company"
+                          name="company"
                           value={formData.company}
                           onChange={(e) => handleInputChange('company', e.target.value)}
                           className="mt-2"
@@ -168,7 +173,10 @@ const Contact = () => {
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
                         <Label htmlFor="projectType">Project Type *</Label>
-                        <Select onValueChange={(value) => handleInputChange('projectType', value)}>
+                        <Select 
+                          name="projectType"
+                          onValueChange={(value) => handleInputChange('projectType', value)}
+                        >
                           <SelectTrigger className="mt-2">
                             <SelectValue placeholder="Select project type" />
                           </SelectTrigger>
@@ -182,7 +190,10 @@ const Contact = () => {
                       </div>
                       <div>
                         <Label htmlFor="budget">Budget Range</Label>
-                        <Select onValueChange={(value) => handleInputChange('budget', value)}>
+                        <Select 
+                          name="budget"
+                          onValueChange={(value) => handleInputChange('budget', value)}
+                        >
                           <SelectTrigger className="mt-2">
                             <SelectValue placeholder="Select budget" />
                           </SelectTrigger>
@@ -196,7 +207,10 @@ const Contact = () => {
                       </div>
                       <div>
                         <Label htmlFor="timeline">Timeline</Label>
-                        <Select onValueChange={(value) => handleInputChange('timeline', value)}>
+                        <Select 
+                          name="timeline"
+                          onValueChange={(value) => handleInputChange('timeline', value)}
+                        >
                           <SelectTrigger className="mt-2">
                             <SelectValue placeholder="Select timeline" />
                           </SelectTrigger>
@@ -214,6 +228,7 @@ const Contact = () => {
                       <Label htmlFor="message">Project Description *</Label>
                       <Textarea
                         id="message"
+                        name="message"
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         required
@@ -232,8 +247,7 @@ const Contact = () => {
               </Card>
             </div>
 
-            {/* Contact Info & Services */}
-            <div className="space-y-8">
+           <div className="space-y-8">
               {/* Contact Information */}
               <Card className="bg-gradient-card shadow-card">
                 <CardContent className="p-6">

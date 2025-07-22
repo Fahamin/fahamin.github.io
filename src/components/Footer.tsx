@@ -4,10 +4,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, label: "GitHub", href: "https://github.com" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-    { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
-    { icon: Mail, label: "Email", href: "mailto:contact@example.com" }
+    { icon: Github, label: "GitHub", href: "https://github.com/Fahamin" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/fahamin-fahim-384958153/" },
+    { icon: Twitter, label: "Facebook", href: "https://www.facebook.com/fahamin.hasanfahim" },
+    { icon: Mail, label: "Email", href: "mailto:fahamin383@gmail.com" }
   ];
 
   const scrollToSection = (sectionId: string) => {

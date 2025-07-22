@@ -34,8 +34,8 @@ const About = () => {
               About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Passionate mobile app developer with 5+ years of experience creating innovative 
-              solutions for Android and cross-platform applications using Flutter.
+              Passionate mobile app developer with 4+ years of experience creating innovative 
+              solutions for Android or Jetpack Compose and cross-platform applications using Flutter.
             </p>
           </div>
 
@@ -49,19 +49,19 @@ const About = () => {
                 that drive business growth.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                My expertise spans from native Android development using Kotlin and Java 
+                My expertise spans from native Android development using Kotlin (Jetpack Compose) and Java 
                 to cross-platform development with Flutter and Dart. I believe in writing 
                 clean, efficient code and creating intuitive user experiences.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="bg-primary/10 px-4 py-2 rounded-full">
-                  <span className="text-primary font-medium">5+ Years Experience</span>
+                  <span className="text-primary font-medium">4+ Years Experience</span>
                 </div>
                 <div className="bg-accent/10 px-4 py-2 rounded-full">
-                  <span className="text-accent font-medium">50+ Projects</span>
+                  <span className="text-accent font-medium">15+ Apps on Play Store</span>
                 </div>
                 <div className="bg-primary/10 px-4 py-2 rounded-full">
-                  <span className="text-primary font-medium">Available for Hire</span>
+                  <span className="text-primary font-medium">Hire Now</span>
                 </div>
               </div>
             </div>

@@ -6,36 +6,36 @@ const Skills = () => {
     {
       title: "Mobile Development",
       skills: [
-        { name: "Android Native (Kotlin/Java)", level: 95 },
-        { name: "Flutter & Dart", level: 90 },
-        { name: "React Native", level: 75 },
-        { name: "Mobile UI/UX Design", level: 85 }
+        { name: "Android Native (Kotlin/Java)", level: 90 },
+        { name: "Flutter & Dart", level: 80 },
+        { name: "Jetpack Compose", level: 80 },
+        
       ]
     },
     {
-      title: "Backend & Database",
+      title: "Backend Impl & DB",
       skills: [
         { name: "Firebase", level: 90 },
-        { name: "REST APIs", level: 85 },
+        { name: "REST APIs", level: 95 },
         { name: "SQLite", level: 80 },
-        { name: "Node.js", level: 70 }
+        { name: "Room", level: 85 }
       ]
     },
     {
       title: "Tools & Technologies",
       skills: [
-        { name: "Git & Version Control", level: 95 },
+        { name: "Git & Version Control", level: 90 },
         { name: "Android Studio", level: 95 },
-        { name: "VS Code", level: 90 },
-        { name: "Figma", level: 80 }
+        { name: "VS Code", level: 70 },
+        { name: "Xcode", level: 80 }
       ]
     }
   ];
 
   const technologies = [
-    "Android Studio", "Flutter", "Kotlin", "Dart", "Java", "Firebase",
-    "REST APIs", "SQLite", "Git", "Figma", "Material Design", "Provider",
-    "Bloc", "Retrofit", "Room", "Hive", "GetX", "Riverpod"
+    "Android Studio","Jetpack Compose","Clen Architecture","Hilt & Koin","MVVM", "Flutter", "Kotlin", "Dart", "Java", "Firebase","Room",
+    "REST APIs", "Coroutines", "Github", "Figma", "OOP","Flow", 
+    "Bloc", "Retrofit", "GetX", "Riverpod"
   ];
 
   return (

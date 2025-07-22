@@ -17,7 +17,7 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="font-bold text-xl bg-gradient-primary bg-clip-text text-transparent">
-          DevPortfolio
+          FAHAMIN
         </div>
 
         {/* Desktop Navigation */}
@@ -40,14 +40,22 @@ const Header = () => {
           >
             Portfolio
           </button>
+         
           <button
-            onClick={() => scrollToSection('experience')}
+            onClick={() => {
+              localStorage.setItem('activeTab', 'experience'); // ✅ Set education tab in storage
+              scrollToSection('experience-education');        // ✅ Scroll to correct section
+            }}
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             Experience
           </button>
+
           <button
-            onClick={() => scrollToSection('education')}
+            onClick={() => {
+              localStorage.setItem('activeTab', 'education'); // ✅ Set education tab in storage
+              scrollToSection('experience-education');        // ✅ Scroll to correct section
+            }}
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             Education
@@ -61,10 +69,18 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm">
-            <Download className="w-4 h-4 mr-2" />
-            Resume
-          </Button>
+          <a
+            href="https://firebasestorage.googleapis.com/v0/b/api-master-3fb49.appspot.com/o/cv%2FFahamin_CV.pdf?alt=media&token=cd2f8dc2-7859-462a-af81-b78723506eac"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" size="sm">
+              <Download className="w-4 h-4 mr-2" />
+              Resume
+            </Button>
+          </a>
+
           <Button onClick={() => scrollToSection('contact')}>
             Hire Me
           </Button>

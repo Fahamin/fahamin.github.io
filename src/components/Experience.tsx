@@ -32,20 +32,7 @@ const Experience = () => {
       ],
       technologies: ["Android Native", "Java", "Kotlin", "SQLite", "REST APIs"]
     },
-    {
-      title: "Freelance Mobile Developer",
-      company: "Self-Employed",
-      location: "Remote",
-      period: "2019 - 2020",
-      type: "Freelance",
-      description: "Provided mobile development services to startups and small businesses, delivering custom mobile solutions.",
-      achievements: [
-        "Successfully completed 20+ freelance projects",
-        "Maintained 100% client satisfaction rate",
-        "Built long-term relationships with repeat clients"
-      ],
-      technologies: ["Flutter", "Firebase", "Dart", "Android", "iOS"]
-    },
+  
     {
       title: "Junior Android Developer",
       company: "StartupTech",
