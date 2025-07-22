@@ -61,7 +61,7 @@ const About = () => {
                   <span className="text-accent font-medium">15+ Apps on Play Store</span>
                 </div>
                 <div className="bg-primary/10 px-4 py-2 rounded-full">
-                  <span className="text-primary font-medium">Hire Now</span>
+                  <span className="text-primary font-medium">Hire Me</span>
                 </div>
               </div>
             </div>

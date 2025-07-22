@@ -92,16 +92,6 @@ const Footer = () => {
             </div>
           </div>
 
-          <hr className="border-background/20 my-8" />
-
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-background/60 text-sm">
-              © {currentYear} Mobile App Developer. All rights reserved.
-            </p>
-            <p className="text-background/60 text-sm flex items-center gap-2 mt-2 md:mt-0">
-              Made with <Heart className="w-4 h-4 text-red-400" /> using React & Tailwind CSS
-            </p>
-          </div>
         </div>
       </div>
     </footer>
